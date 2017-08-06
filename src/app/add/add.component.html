@@ -1,0 +1,63 @@
+ <app-nav></app-nav> 
+
+<div class="container">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <i class="fa fa-address-card-o" aria-hidden="true" fa-3x fa-fw>  Silahkan Masukkan Identitas Anda </i>
+  </div>
+  <div class="panel-body">
+     <form class="form-horizontal" (submit)="addKaryawan()" > <!--nama submit di sini harus sama dengan di add.component ts-->
+
+      <div class="form-group">
+         <label for="no_induk" class="col-sm-2 control-label">Nomor Induk</label>
+         <div class="col-sm-9">
+           <input type="text" class="form-control" [(ngModel)]="model.no_induk" name="no_induk">
+         </div>
+       </div>
+
+       <div class="form-group">
+         <label for="nama" class="col-sm-2 control-label">Nama Lengkap</label>
+         <div class="col-sm-9">
+           <input type="text" class="form-control" [(ngModel)]="model.nama" name="nama">
+         </div>
+       </div>
+
+       <div class="form-group">
+         <label for="alamat" class="col-sm-2 control-label">Alamat Lengkap</label>
+         <div class="col-sm-9">
+           <input type="text" class="form-control" [(ngModel)]="model.alamat" name="alamat">
+         </div>
+       </div>
+
+        <div class="form-group">
+         <label for="jabatan" class="col-sm-2 control-label">Jabatan</label>
+         <div class="col-sm-9">
+           <input type="text" class="form-control" [(ngModel)]="model.jabatan" name="jabatan">
+         </div>
+       </div>
+
+        <div class="form-group">
+         <label for="no_telpon" class="col-sm-2 control-label">No telpon</label>
+         <div class="col-sm-9">
+           <input type="text" class="form-control" [(ngModel)]="no_telpon" name="no_telpon">
+         </div>
+       </div>
+
+       <div class="form-group">
+         <label for="email" class="col-sm-2 control-label">E-mail</label>
+         <div class="col-sm-9">
+           <input type="text" class="form-control" [(ngModel)]="email" name="email">
+         </div>
+       </div>
+
+        <div class="form-group">
+         <div class="col-sm-offset-2 col-sm-8">
+           <button type="submit" class="btn btn-primary">Save</button>
+           <a class="btn btn-info" (click)="goBack()">Cancel</a>
+         </div>
+       </div>
+
+     </form>
+  </div>
+</div>
+</div>

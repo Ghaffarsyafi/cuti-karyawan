@@ -1,0 +1,40 @@
+<app-nav></app-nav>
+
+<div class="container">
+<nav class="navbar navbar-light bg-faded">
+  <form class="form-inline">
+    <h3><i class="fa fa-user " aria-hidden="true" fa-3x fa-fw>  Data Hak Cuti</i></h3>
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button type="button" class="btn btn-primary" [routerLink]="['/add-cuti']">+ Izin Cuti</button> 
+  </form>
+</nav>
+
+<table datatable [dtOptions]="dtOptions" class="table table-bordered table-hover">
+  <thead>
+  <tr>
+    <td>No Induk</td>
+    <td>Nama</td>
+    <td>Nama Bagian</td>
+    <td>Jabatan</td>
+    <td>Tanggal Cuti</td>
+    <td>Tanggal Masuk</td>
+    <td>Keterangan</td>
+    <td width=230 align="center">Action</td>
+  </tr> 
+  </thead>
+    <tr *ngFor="let ct of cuti"> <!-- di sesuaikan dengan nama varible di ts -->
+      <td>{{ ct.no_induk }}</td>
+      <td>{{ ct.nama }}</td>
+      <td>{{ ct.nama_bagian }}</td>
+      <td>{{ ct.jabatan }}</td>
+      <td>{{ ct.tgl_cuti }}</td>
+      <td>{{ ct.tgl_masuk }}</td>
+      <td>{{ ct.keterangan }}</td>
+      <td>
+        <a class="btn btn-info" routerLink="/show-cuti/{{ct.no_induk}}">Detail</a> 
+        <a class="btn btn-success" routerLink="/edit-cuti/{{ct.no_induk}}">Edit</a> 
+        <a class="btn btn-danger" (click)="deleteCuti(ct.no_induk)">Delete</a> 
+      </td>
+    </tr>
+</table>
+</div>

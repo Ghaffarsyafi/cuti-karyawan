@@ -1,0 +1,59 @@
+<!-- <form >
+  <input type="text" name="userpid" #userpid>
+  <br>
+  <input type="text" name="name" #name >
+  <br>
+  <button (click)= "getUser(userpid.value, name.value);" type="button" class="btn btn-default">Login</button>
+</form> -->
+
+<section class="login-info">
+<div class="container">
+  <div class="row main">
+       <div class="form-header">
+          <h1 class="text-center ">login form </h1>
+        </div>
+    <div class="main-content">
+         <form >
+          <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></span>
+            <input type="text" class="form-control" name="username" placeholder="Masukkan Username Anda" #username>
+          </div>
+          <div class="input-group">	
+            <span class="input-group-addon"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></span>
+            <input id="password" type="password" class="form-control" name="password" placeholder="Masukkan Password Anda" #password>
+          </div>
+        
+         <div class="checkbox">
+            <label class="remember">
+                <input name="remember" type="checkbox" > Remember Me
+            </label>
+        </div>
+
+        <div *ngIf="userFounded">
+          Patient Founded !<br>
+          There is record of username: <b>{{usernamenya}}</b> and password: <b>'{{passwordnya}}'</b>
+        </div>
+
+        <div *ngIf="userNotFounded">
+          Patient Not Founded !<br>
+          there is any record with this pid number.
+        </div>
+        
+          <button (click)= "getUser(username.value, password.value);" type="button" class="btn btn-default">Login</button>
+        </form>
+      </div>
+    </div>
+</div>
+</section> 
+
+
+
+<div *ngIf="userFounded">
+  Patient Founded !<br>
+  There is record of patient <b>{{namanya}}</b> with <b>'{{pid}}'</b> pid number.
+</div>
+
+<div *ngIf="userNotFounded">
+  Patient Not Founded !<br>
+  There is any record with this pid number.
+</div>

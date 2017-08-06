@@ -1,0 +1,69 @@
+<app-nav></app-nav>
+<div class="container">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    form edit izin cuti
+  </div>
+  <div class="panel-body">
+    <form class="form-horizontal" (submit)="updateCuti()">
+      
+      <div class="form-group">
+         <label for="no_induk" class="col-sm-2 control-label">Nomor Induk</label>
+         <div class="col-sm-9">
+           <input type="text" class="form-control" [(ngModel)]="model.no_induk" name="no_induk">
+         </div>
+      </div> 
+
+      <div class="form-group">
+         <label for="nama" class="col-sm-2 control-label">Nama Lengkap</label>
+         <div class="col-sm-9">
+           <input type="text" class="form-control" [(ngModel)]="model.nama" name="nama">
+         </div>
+      </div>
+
+      <div class="form-group">
+         <label for="nama_bagian" class="col-sm-2 control-label">Nama Bagian</label>
+         <div class="col-sm-9">
+           <input type="text" class="form-control" [(ngModel)]="model.nama_bagian" name="nama_bagian">
+         </div>
+      </div>
+
+      <div class="form-group">
+         <label for="jabatan" class="col-sm-2 control-label">Jabatan</label>
+         <div class="col-sm-9">
+           <input type="text" class="form-control" [(ngModel)]="model.jabatan" name="jabatan">
+         </div>
+      </div>
+
+      <div class="form-group">
+         <label for="tgl_cuti" class="col-sm-2 control-label">Tg Cuti</label>
+         <div class="col-sm-9">
+           <input type="date" class="form-control" [(ngModel)]="model.tgl_cuti" name="tgl_cuti">
+         </div>
+      </div>
+
+      <div class="form-group">
+         <label for="tgl_masuk" class="col-sm-2 control-label">Tgl Masuk</label>
+         <div class="col-sm-9">
+           <input type="date" class="form-control" [(ngModel)]="model.tgl_masuk" name="tgl_masuk">
+         </div>
+      </div>
+
+      <div class="form-group">
+         <label for="keterangan" class="col-sm-2 control-label">Keterangan</label>
+         <div class="col-sm-9">
+           <input type="text" class="form-control" [(ngModel)]="model.keterangan" name="keterangan">
+         </div>
+      </div>
+
+       <div class="form-group">
+         <div class="col-sm-offset-2 col-sm-8">
+           <button type="submit" class="btn btn-success">Update</button>
+           <a class="btn btn-info" (click)="goBack()">Cancel</a>
+         </div>
+       </div>
+
+    </form>
+  </div>
+</div>
+</div>

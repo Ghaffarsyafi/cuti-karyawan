@@ -1,0 +1,45 @@
+<app-nav></app-nav>
+
+<div class="container">
+  
+   
+<nav class="navbar navbar-light bg-faded">
+  <form class="form-inline">
+    <h3><i class="fa fa-user" aria-hidden="true" fa-3x fa-fw>  Data Karyawan</i></h3>
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+    <button type="button" class="btn btn-primary" [routerLink]="['/add']">+ Tambah data</button> 
+  </form>
+</nav>
+
+<table datatable [dtOptions]="dtOptions"  class="table table-bordered table-hover">
+  <thead> 
+  <tr>
+    <th>No</th>
+    <th>No Induk</th>
+    <th>nama</th>
+    <th>alamat</th>
+    <th>jabatan</th>
+    <th>no telpon</th>
+    <th>email</th>
+    <th width=230 align="center">Action</th>
+  </tr> 
+  </thead>
+<tbody>
+  <tr *ngFor="let karyawan of karyawan"> <!-- di sesuaikan dengan nama varible di ts -->
+      <td>{{ karyawan.id }}</td>
+      <td>{{ karyawan.no_induk }}</td>
+      <td>{{ karyawan.nama }}</td>
+      <td>{{ karyawan.alamat }}</td>
+      <td>{{ karyawan.jabatan }}</td>
+      <td>{{ karyawan.no_telpon }}</td>
+      <td>{{ karyawan.email }}</td>
+      <td>
+        <a class="btn btn-info" routerLink="/show-karyawan/{{karyawan.id}}">Detail</a>
+        <a class="btn btn-success" routerLink="/edit/{{karyawan.id}}">Edit</a>
+        <a class="btn btn-danger" (click)="deleteKaryawan(karyawan.id)">Delete</a>
+      </td>
+    </tr>
+</tbody>
+    
+</table>
+</div>

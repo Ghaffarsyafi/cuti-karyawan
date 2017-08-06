@@ -1,0 +1,68 @@
+<app-nav></app-nav>
+<div class="container">
+<div class="panel panel-default" *ngIf="cuti" >
+  <div class="panel-heading">
+    Karyawan Cuti details
+  </div>
+  <div class="panel-body">
+    <form class="form-horizontal">
+      
+      <div class="form-grpup">
+        <label for="no_induk" class="col-sm-2 control-label">Nomor Induk</label>
+        <div class="col-sm-9">
+          <p class="form-control">{{ cuti.no_induk }}</p>
+        </div>
+      </div>
+
+      <div class="form-grpup">
+        <label for="nama" class="col-sm-2 control-label">Nama Lengkap</label>
+        <div class="col-sm-9">
+          <p class="form-control">{{ cuti.nama }}</p>
+        </div>
+      </div>
+
+      <div class="form-grpup">
+        <label for="nama_bagian" class="col-sm-2 control-label">Nama Bagian</label>
+        <div class="col-sm-9">
+          <p class="form-control">{{ cuti.nama_bagian }}</p>
+        </div>
+      </div>
+
+      <div class="form-grpup">
+        <label for="jabatan" class="col-sm-2 control-label">Jabatan</label>
+        <div class="col-sm-9">
+          <p class="form-control">{{ cuti.jabatan }}</p>
+        </div>
+      </div>
+
+      <div class="form-grpup">
+        <label for="tgl_cuti" class="col-sm-2 control-label">Tgl Cuti</label>
+        <div class="col-sm-9">
+          <p class="form-control">{{ cuti.tgl_cuti }}</p>
+        </div>
+      </div>
+
+      <div class="form-grpup">
+        <label for="tgl_masuk" class="col-sm-2 control-label">Tgl Masuk</label>
+        <div class="col-sm-9">
+          <p class="form-control">{{ cuti.tgl_masuk }}</p>
+        </div>
+      </div>
+
+      <div class="form-grpup">
+        <label for="keterangan" class="col-sm-2 control-label">Keterangan</label>
+        <div class="col-sm-9">
+          <p class="form-control">{{ cuti.keterangan }}</p>
+        </div>
+      </div>
+
+      <div class="form-grpup">
+        <div class="col-sm-offset-2 col-sm-8">
+          <a class="btn btn-info" (click)="goBack()">Back</a>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>
+</div>

@@ -1,0 +1,35 @@
+<app-nav></app-nav>
+<div class="container">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <i class="fa fa-address-card-o" aria-hidden="true" fa-3x fa-fw>  Silahkan Masukkan Username dan password anda </i>
+  </div>
+  <div class="panel-body">
+     <form class="form-horizontal" (submit)="addUser()" > <!--nama submit di sini harus sama dengan di add.component ts-->
+
+      <div class="form-group">
+         <label for="username" class="col-sm-2 control-label">Username</label>
+         <div class="col-sm-4">
+           <input type="text" class="form-control" [(ngModel)]="model.username" name="username">
+         </div>
+       </div>
+
+       <div class="form-group">
+         <label for="password" class="col-sm-2 control-label">Password</label>
+         <div class="col-sm-4">
+           <input type="text" class="form-control" [(ngModel)]="model.password" name="password">
+         </div>
+       </div>
+
+
+        <div class="form-group">
+         <div class="col-sm-offset-2 col-sm-8">
+           <button type="submit" class="btn btn-primary">Save</button>
+           <a class="btn btn-info" (click)="goBack()">Cancel</a>
+         </div>
+       </div>
+
+     </form>
+  </div>
+</div>
+</div>

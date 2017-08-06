@@ -1,0 +1,69 @@
+div#navigator {
+border:1px solid lightgrey;
+height:45px;
+width:45px;
+float:left;
+transition:0.4s ease-out;
+-webkit-transition:0.4s ease-out;
+overflow:hidden ;
+margin:8px;
+background-color:white;
+}
+div#navigator:hover {
+width:400px;
+height:329px;
+box-shadow:0px 1px 8px 0px lightgrey;
+background:white;
+margin:10px 0 0 0;
+}
+.navigator-div:first-child {
+margin-top:13px;
+}
+.navigator-div:nth-child(4) {
+margin-bottom:15px; 
+}
+.navigator-div {
+margin:1px 12px 1px 0px;
+background:#387cb7;
+width:22px;
+height:3px;
+float:right;
+clear:right;
+}
+.navigator-content {
+overflow:hidden ;
+margin:2px 0 0 0;
+list-style-type:none;
+text-transform:uppercase;
+padding:2px 0px 0px 0px;
+border-top:1px solid lightgrey;
+width:100%;
+}
+a.content {
+text-decoration: none;
+display:block;
+font-size:13px;
+border-top:1px solid lightgrey;
+font-weight:bold ;
+background:white;
+color:#595959;
+margin:0;
+left:0;
+padding:15px 5px 10px 20px;
+letter-spacing:2px;
+transition:0.2s ease-out;
+-webkit-transition: 0.3s ease-out;
+text-decoration: none;text-decoration: none;
+}
+
+a.content:hover 
+{
+color:#387cb7;
+border-left:3px solid #387cb7;
+border-right:3px solid #387cb7;
+}
+
+ div#navigator[_ngcontent-c1] {
+    margin-top: -20px;
+   
+} 
