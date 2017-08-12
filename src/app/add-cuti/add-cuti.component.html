@@ -23,7 +23,10 @@
        <div class="form-group">
          <label for="jabatan" class="col-sm-2 control-label">Jabatan</label>
          <div class="col-sm-4">
-           <input type="text" class="form-control" [(ngModel)]="model.jabatan" name="jabatan">
+              <select class="form-control" [(ngModel)]="model.jabatan" name="jabatan">
+                  <option>Manager</option>
+                  <option>Staff</option>
+              </select>
          </div>
 
          <label for="nama_bagian" class="col-sm-2 control-label">Nama Bagian</label>
